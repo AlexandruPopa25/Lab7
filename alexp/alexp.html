@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Fisa de descriere</h1>
+<style>
+body {background-color: lightblue;}
+h1 {color: tomato;}
+h2 {color: orange;}
+p  {color: violet;}
+table {color: white;}
+ul {color: orange;}
+
+table, tr, td, ul {border: 2px solid black;}
+tr:hover {background-color: white}
+
+h1 {font-family: "Garamond";
+    font-style: italic;
+	font-size: 36px;}
+	
+p {font-family: "Helvetica";
+   font-size: 18px;}
+   
+img {border-radius: 12px;
+     width: 250px;
+	 display: block;
+	 padding: 2px;
+	 margin: left;
+	 opacity: 0.6;
+	 }
+	 
+</style>
+<script>
+function viitor()
+{
+document.getElementById("nume").innerHTML = "Ing.Popa Alexandru";
+
+var tabel=document.getElementById("tabel");
+    tabel.rows[1].cells[0].innerHTML="Integrare";
+    tabel.rows[2].cells[0].innerHTML="Dezvoltare";
+    tabel.rows[3].cells[0].innerHTML="Experienta";
+	tabel.rows[4].cells[0].innerHTML="Inginer";
+
+
+document.getElementById("pozaprofil").src = "1-940x400.jpg";
+
+document.body.style.backgroundColor = "LightGray";
+
+var par = document.getElementsByTagName("p");
+var i;
+
+for(i=0;i<par.length;i++){
+par[i].style.color = "white";
+}
+
+}
+
+function arVarst()
+{
+var azi = new Date;
+var varstMea;
+
+var anNasc = document.getElementById("varsta").innerHTML;
+varstMea = azi.getFullYear()- parseInt(anNasc);
+document.getElementById("varsta").innerHTML = varstMea;
+}
+
+</script>
+</head>
+<body>
+
+<h1>Nume</h1>
+<p id="nume">Popa Ioan Alexandru</p>
+<h1>Fotografie</h1>
+<img id="pozaprofil" src="204962039_3606892449412881_5821595153873261367_n (1).jpg" alt="Popa Alexandru" width="300" height="400">
+<h1>Email</h1>
+<a href="https://www.google.com/intl/ro/gmail/about/">alexpopa2507@gmail.com</a>
+<p onmouseover = "arVarst()" id="varsta">2002</p>
+<button onclick="viitor()">Alta viata</button>
+<h1>Citat</h1>
+<p>"O carte buna se deschide cu asteptari si se inchide cu profit. (Amos Bronson Alcott)” </p>
+<h1>Discipline</h1>
+<table id="tabel">
+  <tr>
+    <th>Disciplina</th>
+    <th>An studiu</th>
+  </tr>
+  <tr>
+    <td>Informatica Aplicata</td>
+    <td>Anul 1</td>
+  </tr>
+  <tr>
+    <td>Programarea calculatoarelor si limbaje de programare</td>
+    <td>Anul 1</td>
+  </tr>
+  <tr>
+    <td>Educatie fizica si sport</td>
+    <td>Anul 1</td>
+  </tr>
+  <tr>
+    <td>Inginerie Software</td>
+    <td>Anul 2</td>
+  </tr>
+</table>
+<a href="https://etti.utcluj.ro/planuri-de-inva.html">Planuri de invatamant</a>
+<h1>Hobby-uri</h1>
+<ul>
+  <li>Fotbal</li>
+  <li>Condus</li>
+  <li>Matematica</li>
+</ul>
+
+</body>
+</html>
